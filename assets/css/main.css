@@ -142,6 +142,60 @@ h6 {
 }
 
 
+.card-intro {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.95rem;
+  color: #9575cd; /* lila pastel */
+  margin-bottom: 0.8rem;
+}
+
+.fiesta-title {
+  color: #f48fb1; /* rosa pastel */
+}
+
+.fiesta-title {
+  color: #f48fb1; /* rosa pastel */
+}
+
+.misa-title {
+  color: #7b5cd6; /* rosa pastel */
+}
+
+.misa-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.misa-card h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.misa-card p {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.95rem;
+  color: #6b6b6b;
+  line-height: 1.5;
+}
+
+
+.misa-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen vitral */
+.misa-icon {
+  width: 90px;
+  height: auto;
+}
+
+
+
 
 
 /* PHP Email Form Messages
