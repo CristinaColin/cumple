@@ -100,16 +100,42 @@ h6 {
 #hero {
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay pastel */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(248, 225, 255, 0.6)
+  );
+  z-index: 2;
 }
 
 .hero-content {
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem 1rem;
+  z-index: 4;
+  padding: 2rem 1.5rem;
 }
+
 
 /* Mensaje superior */
 .hero-message {
@@ -133,12 +159,41 @@ h6 {
   margin-top: 2rem;  /* 👈 espacio extra */
 }
 
-.hero-name h1 {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 3.5rem;
+
+#hero h1 {
+  font-size: 3rem;
   font-weight: 700;
   color: #f48fb1; /* rosa pastel */
-  line-height: 1.1;
+}
+
+#hero p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #9575cd; /* lila pastel */
+}
+
+.hero-subtitle {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #7b5cd6;
+}
+
+.hero-message p {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.1rem;
+  color: #6a4fb3;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-name h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #f48fb1;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 
@@ -167,6 +222,7 @@ h6 {
   padding: 2rem 1.5rem;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   height: 100%;
+  padding-bottom: 3.5rem;
 }
 
 .misa-card h3 {
@@ -193,6 +249,40 @@ h6 {
   width: 90px;
   height: auto;
 }
+
+
+.map-btn {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #7b5cd6, #f48fb1);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  z-index: 5;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-btn i {
+  font-size: 1.3rem;
+}
+
+.map-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  color: #fff;
+}
+
 
 
 
@@ -230,6 +320,106 @@ h6 {
 .portfolio-info p {
   font-size: 0.95rem;
   color: #7b5cd6;
+}
+
+/* ********* */
+/* ESTRELLAS */
+/* ********* */
+
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ✨ Estrella base */
+.stars span {
+  position: absolute;
+  top: -20%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,1) 0%,
+    rgba(255,220,245,0.9) 30%,
+    rgba(240,170,230,0.6) 55%,
+    rgba(220,120,210,0.3) 70%,
+    rgba(220,120,210,0) 100%
+  );
+
+  box-shadow:
+    0 0 4px rgba(255,220,245,0.8),
+    0 0 10px rgba(240,170,230,0.5);
+
+  animation: fall linear infinite;
+}
+
+.stars span:nth-child(odd)  { animation-duration: 46s; }
+.stars span:nth-child(even) { animation-duration: 58s; }
+
+.stars span:nth-child(3n)   { animation-duration: 52s; }
+.stars span:nth-child(4n)   { animation-duration: 64s; }
+
+
+/* ✨ Variantes de tamaño (NUNCA > 0.7) */
+.stars span:nth-child(3n)  { transform: scale(0.3); }
+.stars span:nth-child(3n+1){ transform: scale(0.45); }
+.stars span:nth-child(3n+2){ transform: scale(0.65); }
+
+/* ✨ Posiciones + delays (clave para infinito natural) */
+.stars span:nth-child(1)  { left: 4%;  animation-delay: -5s; }
+.stars span:nth-child(2)  { left: 8%;  animation-delay: -10s; }
+.stars span:nth-child(3)  { left: 12%; animation-delay: -15s; }
+.stars span:nth-child(4)  { left: 16%; animation-delay: -25s; }
+.stars span:nth-child(5)  { left: 20%; animation-delay: -30s; }
+.stars span:nth-child(6)  { left: 24%; animation-delay: -35s; }
+.stars span:nth-child(7)  { left: 28%; animation-delay: -40s; }
+.stars span:nth-child(8)  { left: 32%; animation-delay: -45s; }
+.stars span:nth-child(9)  { left: 36%; animation-delay: -50s; }
+.stars span:nth-child(10) { left: 40%; animation-delay: -55s; }
+.stars span:nth-child(11) { left: 44%; animation-delay: -60s; }
+.stars span:nth-child(12) { left: 48%; animation-delay: -65s; }
+.stars span:nth-child(13) { left: 52%; animation-delay: -70s; }
+.stars span:nth-child(14) { left: 56%; animation-delay: -75s; }
+.stars span:nth-child(15) { left: 60%; animation-delay: -80s; }
+.stars span:nth-child(16) { left: 64%; animation-delay: -85s; }
+.stars span:nth-child(17) { left: 68%; animation-delay: -90s; }
+.stars span:nth-child(18) { left: 72%; animation-delay: -95s; }
+.stars span:nth-child(19) { left: 76%; animation-delay: -100s; }
+.stars span:nth-child(20) { left: 80%; animation-delay: -105s; }
+.stars span:nth-child(21) { left: 84%; animation-delay: -110s; }
+.stars span:nth-child(22) { left: 88%; animation-delay: -115s; }
+.stars span:nth-child(23) { left: 92%; animation-delay: -120; }
+.stars span:nth-child(24) { left: 96%; animation-delay: -125; }
+.stars span:nth-child(25) { left: 80%; animation-delay: -130s; }
+.stars span:nth-child(26) { left: 84%; animation-delay: -135s; }
+.stars span:nth-child(27) { left: 88%; animation-delay: -140s; }
+.stars span:nth-child(28) { left: 82%; animation-delay: -145s; }
+.stars span:nth-child(29) { left: 86%; animation-delay: -150s; }
+.stars span:nth-child(30) { left: 86%; animation-delay: -150s; }
+
+
+/* ✨ Movimiento suave tipo polvo mágico */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) scale(var(--s, 1));
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(60vh) translateX(-10px);
+  }
+  100% {
+    transform: translateY(130vh) translateX(10px);
+    opacity: 0;
+  }
 }
 
 
@@ -288,11 +478,23 @@ h6 {
   }
 }
 
+
+
+
 @media (max-width: 576px) {
   #hero .container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  .hero-name h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-message p {
+    font-size: 1rem;
+  }
+
 }
 
 
