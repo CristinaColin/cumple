@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #272829;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #45505b;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #0563bb;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #45505b;  /* The default color of the main navmenu links */
-  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #45505b;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #0563bb;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0563bb;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -54,7 +66,7 @@
 
 /* Smooth scroll */
 :root {
---default-font: 'Fredoka', sans-serif;
+  --default-font: 'Fredoka', sans-serif;
   --heading-font: 'Fredoka', sans-serif;
 
   scroll-behavior: smooth;
@@ -122,11 +134,9 @@ h6 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.4),
-    rgba(248, 225, 255, 0.6)
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.4),
+      rgba(248, 225, 255, 0.6));
   z-index: 2;
 }
 
@@ -141,14 +151,16 @@ h6 {
 .hero-message {
   text-align: center;
   margin-top: 2%;
-  margin-bottom: 4rem; /* 👈 espacio hacia el nombre */
+  margin-bottom: 4rem;
+  /* 👈 espacio hacia el nombre */
 }
 
 .hero-message p {
   font-family: 'Fredoka', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #7b5cd6; /* lila pastel */
+  color: #7b5cd6;
+  /* lila pastel */
   line-height: 1.5;
 }
 
@@ -156,20 +168,23 @@ h6 {
 .hero-name {
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: 2rem;  /* 👈 espacio extra */
+  margin-top: 2rem;
+  /* 👈 espacio extra */
 }
 
 
 #hero h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #f48fb1; /* rosa pastel */
+  color: #f48fb1;
+  /* rosa pastel */
 }
 
 #hero p {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #9575cd; /* lila pastel */
+  color: #9575cd;
+  /* lila pastel */
 }
 
 .hero-subtitle {
@@ -193,34 +208,38 @@ h6 {
   font-weight: 700;
   line-height: 1.05;
   color: #f48fb1;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 
 .card-intro {
   font-family: 'Fredoka', sans-serif;
   font-size: 0.95rem;
-  color: #9575cd; /* lila pastel */
+  color: #9575cd;
+  /* lila pastel */
   margin-bottom: 0.8rem;
 }
 
 .fiesta-title {
-  color: #f48fb1; /* rosa pastel */
+  color: #f48fb1;
+  /* rosa pastel */
 }
 
 .fiesta-title {
-  color: #f48fb1; /* rosa pastel */
+  color: #f48fb1;
+  /* rosa pastel */
 }
 
 .misa-title {
-  color: #7b5cd6; /* rosa pastel */
+  color: #7b5cd6;
+  /* rosa pastel */
 }
 
 .misa-card {
   background: #ffffff;
   border-radius: 1.5rem;
   padding: 2rem 1.5rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   height: 100%;
   padding-bottom: 3.5rem;
 }
@@ -267,7 +286,7 @@ h6 {
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   z-index: 5;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -279,7 +298,7 @@ h6 {
 
 .map-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
   color: #fff;
 }
 
@@ -297,7 +316,7 @@ h6 {
   background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .portfolio-item img {
@@ -343,84 +362,271 @@ h6 {
   border-radius: 50%;
   opacity: 0;
 
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,1) 0%,
-    rgba(255,220,245,0.9) 30%,
-    rgba(240,170,230,0.6) 55%,
-    rgba(220,120,210,0.3) 70%,
-    rgba(220,120,210,0) 100%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 220, 245, 0.9) 30%,
+      rgba(240, 170, 230, 0.6) 55%,
+      rgba(220, 120, 210, 0.3) 70%,
+      rgba(220, 120, 210, 0) 100%);
 
   box-shadow:
-    0 0 4px rgba(255,220,245,0.8),
-    0 0 10px rgba(240,170,230,0.5);
+    0 0 4px rgba(255, 220, 245, 0.8),
+    0 0 10px rgba(240, 170, 230, 0.5);
 
   animation: fall linear infinite;
 }
 
-.stars span:nth-child(odd)  { animation-duration: 46s; }
-.stars span:nth-child(even) { animation-duration: 58s; }
+.stars span:nth-child(odd) {
+  animation-duration: 18s;
+}
 
-.stars span:nth-child(3n)   { animation-duration: 52s; }
-.stars span:nth-child(4n)   { animation-duration: 64s; }
+.stars span:nth-child(even) {
+  animation-duration: 24s;
+}
+
+.stars span:nth-child(3n) {
+  animation-duration: 20s;
+}
+
+.stars span:nth-child(4n) {
+  animation-duration: 26s;
+}
+
+.stars span:nth-child(5n) {
+  box-shadow:
+    0 0 6px rgba(255, 220, 245, 1),
+    0 0 14px rgba(255, 180, 230, 0.9);
+}
+
+.stars span:nth-child(4n) {
+  box-shadow:
+    0 0 6px #fff8cf,
+    0 0 14px #fff3ad;
+
+  background: radial-gradient(circle,
+      #fff8cf 0%,
+      #fff3ad 30%,
+      #ecdc7c 55%,
+      #c5b768 70%,
+      #5e5733 100%);
+}
 
 
 /* ✨ Variantes de tamaño (NUNCA > 0.7) */
-.stars span:nth-child(3n)  { transform: scale(0.3); }
-.stars span:nth-child(3n+1){ transform: scale(0.45); }
-.stars span:nth-child(3n+2){ transform: scale(0.65); }
+.stars span:nth-child(3n) {
+  transform: scale(0.35);
+}
+
+.stars span:nth-child(3n+1) {
+  transform: scale(0.50);
+}
+
+.stars span:nth-child(3n+2) {
+  transform: scale(0.65);
+}
 
 /* ✨ Posiciones + delays (clave para infinito natural) */
-.stars span:nth-child(1)  { left: 4%;  animation-delay: -5s; }
-.stars span:nth-child(2)  { left: 8%;  animation-delay: -10s; }
-.stars span:nth-child(3)  { left: 12%; animation-delay: -15s; }
-.stars span:nth-child(4)  { left: 16%; animation-delay: -25s; }
-.stars span:nth-child(5)  { left: 20%; animation-delay: -30s; }
-.stars span:nth-child(6)  { left: 24%; animation-delay: -35s; }
-.stars span:nth-child(7)  { left: 28%; animation-delay: -40s; }
-.stars span:nth-child(8)  { left: 32%; animation-delay: -45s; }
-.stars span:nth-child(9)  { left: 36%; animation-delay: -50s; }
-.stars span:nth-child(10) { left: 40%; animation-delay: -55s; }
-.stars span:nth-child(11) { left: 44%; animation-delay: -60s; }
-.stars span:nth-child(12) { left: 48%; animation-delay: -65s; }
-.stars span:nth-child(13) { left: 52%; animation-delay: -70s; }
-.stars span:nth-child(14) { left: 56%; animation-delay: -75s; }
-.stars span:nth-child(15) { left: 60%; animation-delay: -80s; }
-.stars span:nth-child(16) { left: 64%; animation-delay: -85s; }
-.stars span:nth-child(17) { left: 68%; animation-delay: -90s; }
-.stars span:nth-child(18) { left: 72%; animation-delay: -95s; }
-.stars span:nth-child(19) { left: 76%; animation-delay: -100s; }
-.stars span:nth-child(20) { left: 80%; animation-delay: -105s; }
-.stars span:nth-child(21) { left: 84%; animation-delay: -110s; }
-.stars span:nth-child(22) { left: 88%; animation-delay: -115s; }
-.stars span:nth-child(23) { left: 92%; animation-delay: -120; }
-.stars span:nth-child(24) { left: 96%; animation-delay: -125; }
-.stars span:nth-child(25) { left: 80%; animation-delay: -130s; }
-.stars span:nth-child(26) { left: 84%; animation-delay: -135s; }
-.stars span:nth-child(27) { left: 88%; animation-delay: -140s; }
-.stars span:nth-child(28) { left: 82%; animation-delay: -145s; }
-.stars span:nth-child(29) { left: 86%; animation-delay: -150s; }
-.stars span:nth-child(30) { left: 86%; animation-delay: -150s; }
+.stars span:nth-child(31) {
+  left: 4%;
+  animation-delay: -5s;
+}
+
+.stars span:nth-child(32) {
+  left: 8%;
+  animation-delay: -10s;
+}
+
+.stars span:nth-child(33) {
+  left: 12%;
+  animation-delay: -15s;
+}
+
+.stars span:nth-child(34) {
+  left: 16%;
+  animation-delay: -25s;
+}
+
+.stars span:nth-child(35) {
+  left: 20%;
+  animation-delay: -30s;
+}
+
+.stars span:nth-child(1) {
+  left: 4%;
+  animation-delay: -5s;
+}
+
+.stars span:nth-child(2) {
+  left: 8%;
+  animation-delay: -10s;
+}
+
+.stars span:nth-child(3) {
+  left: 12%;
+  animation-delay: -15s;
+}
+
+.stars span:nth-child(4) {
+  left: 16%;
+  animation-delay: -25s;
+}
+
+.stars span:nth-child(5) {
+  left: 20%;
+  animation-delay: -30s;
+}
+
+.stars span:nth-child(6) {
+  left: 24%;
+  animation-delay: -35s;
+}
+
+.stars span:nth-child(7) {
+  left: 28%;
+  animation-delay: -40s;
+}
+
+.stars span:nth-child(8) {
+  left: 32%;
+  animation-delay: -45s;
+}
+
+.stars span:nth-child(9) {
+  left: 36%;
+  animation-delay: -50s;
+}
+
+.stars span:nth-child(10) {
+  left: 40%;
+  animation-delay: -55s;
+}
+
+.stars span:nth-child(11) {
+  left: 44%;
+  animation-delay: -60s;
+}
+
+.stars span:nth-child(12) {
+  left: 48%;
+  animation-delay: -65s;
+}
+
+.stars span:nth-child(13) {
+  left: 52%;
+  animation-delay: -70s;
+}
+
+.stars span:nth-child(14) {
+  left: 56%;
+  animation-delay: -75s;
+}
+
+.stars span:nth-child(15) {
+  left: 60%;
+  animation-delay: -80s;
+}
+
+.stars span:nth-child(16) {
+  left: 64%;
+  animation-delay: -85s;
+}
+
+.stars span:nth-child(17) {
+  left: 68%;
+  animation-delay: -90s;
+}
+
+.stars span:nth-child(18) {
+  left: 72%;
+  animation-delay: -95s;
+}
+
+.stars span:nth-child(19) {
+  left: 76%;
+  animation-delay: -100s;
+}
+
+.stars span:nth-child(20) {
+  left: 80%;
+  animation-delay: -105s;
+}
+
+.stars span:nth-child(21) {
+  left: 84%;
+  animation-delay: -110s;
+}
+
+.stars span:nth-child(22) {
+  left: 88%;
+  animation-delay: -115s;
+}
+
+.stars span:nth-child(23) {
+  left: 92%;
+  animation-delay: -120;
+}
+
+.stars span:nth-child(24) {
+  left: 96%;
+  animation-delay: -125;
+}
+
+.stars span:nth-child(25) {
+  left: 80%;
+  animation-delay: -130s;
+}
+
+.stars span:nth-child(26) {
+  left: 84%;
+  animation-delay: -135s;
+}
+
+.stars span:nth-child(27) {
+  left: 88%;
+  animation-delay: -140s;
+}
+
+.stars span:nth-child(28) {
+  left: 82%;
+  animation-delay: -145s;
+}
+
+.stars span:nth-child(29) {
+  left: 86%;
+  animation-delay: -150s;
+}
+
+.stars span:nth-child(30) {
+  left: 86%;
+  animation-delay: -150s;
+}
 
 
 /* ✨ Movimiento suave tipo polvo mágico */
 @keyframes fall {
   0% {
-    transform: translateY(-10vh) translateX(0) scale(var(--s, 1));
+    transform: translateY(-15vh) translateX(0) scale(var(--s, .5));
     opacity: 0;
   }
+
   10% {
-    opacity: 0.9;
+    opacity: 1;
   }
-  50% {
-    transform: translateY(60vh) translateX(-10px);
+
+  40% {
+    transform: translateY(40vh) translateX(-15px);
   }
+
+  70% {
+    transform: translateY(90vh) translateX(15px);
+  }
+
   100% {
-    transform: translateY(130vh) translateX(10px);
+    transform: translateY(140vh) translateX(-10px);
     opacity: 0;
   }
 }
+
 
 
 
